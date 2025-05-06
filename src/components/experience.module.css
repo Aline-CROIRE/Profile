@@ -1,0 +1,132 @@
+/* src/components/experience.module.css */
+.experience {
+    padding: 5rem 0;
+  }
+  
+  .container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+  
+  .sectionTitle {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .sectionTitle h2 {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 1rem;
+  }
+  
+  .sectionTitle h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -0.5rem;
+    width: 50px;
+    height: 3px;
+    background-color: var(--primary);
+    transform: translateX(-50%);
+  }
+  
+  .sectionTitle p {
+    color: var(--gray-500);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .timeline {
+    position: relative;
+    padding: 2rem 0;
+  }
+  
+  .timelineLine {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: rgba(212, 175, 55, 0.2);
+    transform: translateX(-50%);
+  }
+  
+  .timelineItem {
+    position: relative;
+    margin-bottom: 3rem;
+    display: flex;
+  }
+  
+  .timelineItem:nth-child(odd) {
+    justify-content: flex-end;
+  }
+  
+  .timelineItem:nth-child(even) .timelineContent {
+    margin-left: auto;
+  }
+  
+  .timelineDot {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: rgba(212, 175, 55, 0.2);
+    border: 4px solid var(--primary);
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+  }
+  
+  .timelineContent {
+    width: calc(50% - 3rem);
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(212, 175, 55, 0.1);
+  }
+  
+  .timelinePeriod {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    background-color: rgba(212, 175, 55, 0.1);
+    color: var(--primary-dark);
+    margin-bottom: 0.75rem;
+  }
+  
+  .timelineTitle {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .timelineOrg {
+    color: var(--gray-500);
+    margin-bottom: 1rem;
+  }
+  
+  @media (max-width: 768px) {
+    .timelineLine {
+      left: 1rem;
+    }
+    
+    .timelineItem {
+      justify-content: flex-start !important;
+      padding-left: 3rem;
+    }
+    
+    .timelineDot {
+      left: 1rem;
+    }
+    
+    .timelineContent {
+      width: 100%;
+    }
+  }

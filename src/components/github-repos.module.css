@@ -1,0 +1,182 @@
+/* src/components/github-repos.module.css */
+.githubProjects {
+    padding: 5rem 0;
+  }
+  
+  .container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+  
+  .sectionTitle {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .sectionTitle h2 {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 1rem;
+  }
+  
+  .sectionTitle h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -0.5rem;
+    width: 50px;
+    height: 3px;
+    background-color: var(--primary);
+    transform: translateX(-50%);
+  }
+  
+  .sectionTitle p {
+    color: var(--gray-500);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .projectsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .projectCard {
+    background-color: white;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(212, 175, 55, 0.1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .projectCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+  
+  .cardContent {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .cardHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+  
+  .titleContainer {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .icon {
+    color: var(--primary);
+  }
+  
+  .title {
+    font-weight: 600;
+    font-size: 1.125rem;
+  }
+  
+  .stats {
+    display: flex;
+    gap: 0.75rem;
+  }
+  
+  .stat {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    color: var(--gray-500);
+    font-size: 0.75rem;
+  }
+  
+  .description {
+    color: var(--gray-600);
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+    flex: 1;
+  }
+  
+  .language {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: auto;
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+  }
+  
+  .languageDot {
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+  }
+  
+  .cardFooter {
+    padding: 1rem 1.5rem;
+    border-top: 1px solid var(--gray-200);
+  }
+  
+  .viewButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius);
+    font-size: 0.875rem;
+    font-weight: 500;
+    background-color: white;
+    color: var(--gray-700);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    transition: all 0.3s ease;
+  }
+  
+  .viewButton:hover {
+    background-color: rgba(212, 175, 55, 0.1);
+  }
+  
+  .viewAllButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.175,55,0.1);
+  }
+  
+  .viewAllButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    margin: 2.5rem auto 0;
+    border-radius: var(--radius);
+    font-size: 0.875rem;
+    font-weight: 500;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    transition: all 0.3s ease;
+  }
+  
+  .viewAllButton:hover {
+    background-color: var(--primary-dark);
+  }
+  
+  @media (max-width: 768px) {
+    .projectsGrid {
+      grid-template-columns: 1fr;
+    }
+  }

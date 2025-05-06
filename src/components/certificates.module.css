@@ -1,0 +1,124 @@
+/* src/components/certificates.module.css */
+.certificates {
+    padding: 5rem 0;
+    background-color: var(--gray-100);
+  }
+  
+  .container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+  
+  .sectionTitle {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .sectionTitle h2 {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 1rem;
+  }
+  
+  .sectionTitle h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -0.5rem;
+    width: 50px;
+    height: 3px;
+    background-color: var(--primary);
+    transform: translateX(-50%);
+  }
+  
+  .sectionTitle p {
+    color: var(--gray-500);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .certificatesGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+  
+  .certificateCard {
+    background-color: white;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    border: 1px solid rgba(212, 175, 55, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .certificateCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+  
+  .cardContent {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .cardMedia {
+    position: relative;
+    width: 100%;
+    height: 12rem;
+  }
+  
+  .cardBody {
+    padding: 1.5rem;
+    flex: 1;
+  }
+  
+  .cardHeader {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .icon {
+    color: var(--primary);
+  }
+  
+  .cardTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+  
+  .cardMeta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--gray-500);
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+  }
+  
+  .badgeContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  
+  .badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    background-color: rgba(212, 175, 55, 0.1);
+    color: var(--primary-dark);
+  }
+  
+  @media (max-width: 768px) {
+    .certificatesGrid {
+      grid-template-columns: 1fr;
+    }
+  }

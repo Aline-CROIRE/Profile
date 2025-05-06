@@ -1,0 +1,188 @@
+/* src/components/projects.module.css */
+.projects {
+    padding: 5rem 0;
+    background-color: var(--gray-100);
+  }
+  
+  .container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+  
+  .sectionTitle {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .sectionTitle h2 {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 1rem;
+  }
+  
+  .sectionTitle h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -0.5rem;
+    width: 50px;
+    height: 3px;
+    background-color: var(--primary);
+    transform: translateX(-50%);
+  }
+  
+  .sectionTitle p {
+    color: var(--gray-500);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .filterButtons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .filterButton {
+    padding: 0.5rem 1.25rem;
+    border-radius: var(--radius);
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .filterButtonActive {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+  }
+  
+  .filterButtonInactive {
+    background-color: white;
+    color: var(--gray-700);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+  }
+  
+  .filterButtonInactive:hover {
+    background-color: rgba(212, 175, 55, 0.1);
+  }
+  
+  .projectsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .projectCard {
+    background-color: white;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    border: 1px solid rgba(212, 175, 55, 0.1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .projectCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+  
+  .projectImage {
+    position: relative;
+    width: 100%;
+    height: 12rem;
+    overflow: hidden;
+  }
+  
+  .projectImage img {
+    transition: transform 0.3s ease;
+  }
+  
+  .projectCard:hover .projectImage img {
+    transform: scale(1.05);
+  }
+  
+  .projectContent {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .badgeContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    background-color: rgba(212, 175, 55, 0.1);
+    color: var(--primary-dark);
+  }
+  
+  .projectTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .projectDescription {
+    color: var(--gray-600);
+    margin-bottom: 1.5rem;
+    flex: 1;
+  }
+  
+  .projectLinks {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: auto;
+  }
+  
+  .projectLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius);
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  
+  .primaryLink {
+    background-color: var(--primary);
+    color: white;
+  }
+  
+  .primaryLink:hover {
+    background-color: var(--primary-dark);
+  }
+  
+  .secondaryLink {
+    background-color: white;
+    color: var(--gray-700);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+  }
+  
+  .secondaryLink:hover {
+    background-color: rgba(212, 175, 55, 0.1);
+  }
+  
+  @media (max-width: 768px) {
+    .projectsGrid {
+      grid-template-columns: 1fr;
+    }
+  }
