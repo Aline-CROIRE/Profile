@@ -96,10 +96,12 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63799.41051610985!2d30.03955565!3d-1.9440867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dca4258ed8e797%3A0xf32b36a5411d0bc8!2sKigali%2C%20Rwanda!5e0!3m2!1sen!2sus!4v1651849301955!5m2!1sen!2sus"
                 className={styles.map}
-                allowFullScreen=""
+                allowFullScreen={false}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
+
+
             </div>
           </div>
 
