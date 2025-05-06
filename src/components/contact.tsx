@@ -20,11 +20,11 @@ export default function Contact() {
 }
 
 
-  const handleSubmit = async (e) => {
-    e.preventDefault()
-    setIsSubmitting(true)
+const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault()
+  setIsSubmitting(true)
 
-    // Simulate form submission
+
     await new Promise((resolve) => setTimeout(resolve, 1500))
 
     // Reset form
